@@ -16,8 +16,8 @@ layer for the backbone which is the first convolutional layer applied on
 the input image. Resnet50 has 50 layers and uses the ReLu activation
 function.
 
-![screenshot](screenshot.png)
-![Faster R-CNN Resnet50](fasterrcnn50.png){width="0.6\\linewidth"}
+
+![Faster R-CNN Resnet50](fasterrcnn50.png)
 
 You can find the paper from which the model is from
 [here](https://arxiv.org/pdf/1506.01497)
