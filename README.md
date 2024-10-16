@@ -16,8 +16,7 @@ layer for the backbone which is the first convolutional layer applied on
 the input image. Resnet50 has 50 layers and uses the ReLu activation
 function.
 
-
-![Faster R-CNN Resnet50](fasterrcnn50.png)
+<img src="fasterrcnn50.png" width="600">
 
 You can find the paper from which the model is from
 [here](https://arxiv.org/pdf/1506.01497)
@@ -36,7 +35,7 @@ dataset](bounding box.png){width="0.6\\linewidth"}
 The problem is that the model needs to have the top-left and bottom
 right corners coordinates to be trained and evaluated.
 
-![Dataset's transformation](transf.png){width="0.6\\linewidth"}
+<img src="transf.png" width="600">
 
 Thus, I transformed my dataset to by applying these operations on every
 bounding boxes of every images :
@@ -44,7 +43,7 @@ bounding boxes of every images :
 $$X2 = X1 + W$$ $$Y2 = Y1 + H$$
 
 ![Dataframe used to train and evaluate the
-model](dtfr.png){width="0.6\\linewidth"}
+model](dtfr.png)
 
 # Training the Model
 
@@ -58,14 +57,14 @@ using these values :
 
 -   Weight Decay : 0.001
 
-![Best training at the
-presentation](losses_lr0001_bs16_ep20_wd001_val.png){width="0.6\\linewidth"}
+<img src="losses_lr0001_bs16_ep20_wd001_val.png" width="600">
+
 
 I ran more tests after the presentation and by using a learning rate of
 0.00001 I got a better result :
 
-![Best Training after more
-tests](losses_lr0001_bs16_ep10_wd001_val.png){width="0.6\\linewidth"}
+<img src="losses_lr0001_bs16_ep10_wd001_val.png" width="600">
+
 
 # Evaluate the Model
 
@@ -73,5 +72,4 @@ To evaluate the model I drew the bounding boxes predicted by the model
 after using the nonMaxSupression function with different values of
 threshold. Here is one result with a threshold of 0.5.
 
-![Output image after prediction of the
-model](output_image.jpg){width="0.6\\linewidth"}
+<img src="output_image.jpg" width="400">
